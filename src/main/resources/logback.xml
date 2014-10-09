@@ -1,0 +1,11 @@
+<configuration>
+  <logger name="fr.dudie.nominatim" level="WARN" />
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%date{HH:mm:ss.SSS} %-5level [%thread] (%file:%line\) - %msg%n</pattern>
+		</encoder>
+	</appender>
+	<root level="debug">
+		<appender-ref ref="STDOUT" />
+	</root>
+</configuration>
