@@ -16,7 +16,7 @@ org.scalastyle.sbt.ScalastylePlugin.Settings
 
 instrumentSettings
 
-scalariformSettings
+defaultScalariformSettings
 
 libraryDependencies ++= Seq(
   "com.google.guava" % "guava" % "18.0",
