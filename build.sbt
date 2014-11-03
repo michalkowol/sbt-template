@@ -10,7 +10,7 @@ incOptions := incOptions.value.withNameHashing(true)
 
 scalacOptions ++= Seq("-unchecked", "-deprecation", "-feature")
 
-Seq(com.github.retronym.SbtOneJar.oneJarSettings: _*)
+com.github.retronym.SbtOneJar.oneJarSettings
 
 org.scalastyle.sbt.ScalastylePlugin.Settings
 
