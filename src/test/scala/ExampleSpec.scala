@@ -15,7 +15,7 @@ class ExampleSpec extends FlatSpec with Matchers with MockitoSugar {
 
   it should "throw NoSuchElementException if an empty stack is popped" in {
     val emptyStack = new Stack[Int]
-    a [NoSuchElementException] should be thrownBy {
+    a[NoSuchElementException] should be thrownBy {
       emptyStack.pop()
     }
   }

@@ -1,12 +1,10 @@
 name := "project"
-version in ThisBuild := "1.0"
 scalaVersion in ThisBuild := "2.11.5"
 
 incOptions := incOptions.value.withNameHashing(true)
 scalacOptions ++= Seq("-unchecked", "-deprecation", "-feature")
 
 com.github.retronym.SbtOneJar.oneJarSettings
-defaultScalariformSettings
 jacoco.settings
 
 libraryDependencies += "com.google.guava" % "guava" % "18.0"
