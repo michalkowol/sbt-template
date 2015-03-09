@@ -4,7 +4,6 @@ scalariformSettings
 
 ScalariformKeys.preferences := ScalariformKeys.preferences.value
   .setPreference(DoubleIndentClassDeclaration, true)
-  .setPreference(FormatXml, false)
+  .setPreference(AlignParameters, true)
   .setPreference(PreserveSpaceBeforeArguments, true)
   .setPreference(SpacesAroundMultiImports, false)
-  .setPreference(SpacesWithinPatternBinders, false)
