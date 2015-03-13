@@ -4,7 +4,6 @@ scalaVersion in ThisBuild := "2.11.6"
 incOptions := incOptions.value.withNameHashing(nameHashing = true)
 scalacOptions ++= Seq("-unchecked", "-deprecation", "-feature")
 
-com.github.retronym.SbtOneJar.oneJarSettings
 jacoco.settings
 
 libraryDependencies += "org.scaldi" %% "scaldi" % "0.5.4"
