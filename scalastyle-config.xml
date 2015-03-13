@@ -56,7 +56,7 @@
   <check level="error" class="org.scalastyle.scalariform.NoFinalizeChecker" enabled="true"></check>
   <check level="error" class="org.scalastyle.scalariform.CovariantEqualsChecker" enabled="true"></check>
   <check level="error" class="org.scalastyle.scalariform.StructuralTypeChecker" enabled="true"></check>
-  <check level="error" class="org.scalastyle.file.RegexChecker" enabled="true">
+  <check level="warning" class="org.scalastyle.file.RegexChecker" enabled="true">
     <parameters>
       <parameter name="regex"><![CDATA[println]]></parameter>
     </parameters>
@@ -95,7 +95,7 @@
     </parameters>
   </check>
   <check level="error" class="org.scalastyle.scalariform.PublicMethodsHaveTypeChecker" enabled="true"></check>
-  <check level="error" class="org.scalastyle.file.NewLineAtEofChecker" enabled="true"></check>
+  <check level="error" class="org.scalastyle.file.NewLineAtEofChecker" enabled="false"></check>
   <check level="error" class="org.scalastyle.file.NoNewLineAtEofChecker" enabled="false"></check>
   <check level="error" class="org.scalastyle.file.RegexChecker" enabled="true">
     <parameters>

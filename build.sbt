@@ -1,7 +1,7 @@
 name := "project"
 scalaVersion in ThisBuild := "2.11.6"
 
-incOptions := incOptions.value.withNameHashing(true)
+incOptions := incOptions.value.withNameHashing(nameHashing = true)
 scalacOptions ++= Seq("-unchecked", "-deprecation", "-feature")
 
 com.github.retronym.SbtOneJar.oneJarSettings
