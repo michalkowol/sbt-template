@@ -17,7 +17,7 @@ val akkaVersion = "2.3.14"
 val cascadeVersion = "0.5.1"
 
 libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.1.3"
-libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging-slf4j" % "2.1.2"
+libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.1.0"
 libraryDependencies += "com.paypal" %% "cascade-common" % cascadeVersion
 libraryDependencies += "com.paypal" %% "cascade-json" % cascadeVersion
 libraryDependencies += "com.typesafe.akka" %% "akka-actor" % akkaVersion
