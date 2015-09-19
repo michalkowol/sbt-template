@@ -1,5 +1,5 @@
-name := "project"
-version in ThisBuild := "1.0-SNAPSHOT"
+name := "sbt-template"
+version in ThisBuild := "1.0.0"
 scalaVersion in ThisBuild := "2.11.7"
 
 incOptions := incOptions.value.withNameHashing(nameHashing = true)
@@ -13,8 +13,8 @@ Revolver.settings
 Revolver.enableDebugging(port = 5005, suspend = false)
 
 val sprayVersion = "1.3.3"
-val akkaVersion = "2.3.12"
-val cascadeVersion = "0.5.0"
+val akkaVersion = "2.3.14"
+val cascadeVersion = "0.5.1"
 
 libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.1.3"
 libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging-slf4j" % "2.1.2"
