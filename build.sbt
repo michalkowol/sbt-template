@@ -13,7 +13,7 @@ Revolver.settings
 Revolver.enableDebugging(port = 5005, suspend = false)
 
 val sprayVersion = "1.3.3"
-val akkaVersion = "2.3.14"
+val akkaVersion = "2.4.0"
 val cascadeVersion = "0.5.1"
 
 libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.1.3"
@@ -28,4 +28,4 @@ libraryDependencies += "io.spray" %% "spray-client" % sprayVersion
 libraryDependencies += "org.scalatest" %% "scalatest" % "2.2.5" % "test"
 libraryDependencies += "org.mockito" % "mockito-all" % "1.10.19" % "test"
 libraryDependencies += "io.spray" %% "spray-testkit" % sprayVersion % "test"
-libraryDependencies += "com.typesafe.akka" %% "akka-actor-tests" % akkaVersion % "test"
+libraryDependencies += "com.typesafe.akka" %% "akka-testkit" % akkaVersion % "test"
