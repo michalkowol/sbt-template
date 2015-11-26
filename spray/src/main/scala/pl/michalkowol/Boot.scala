@@ -12,7 +12,7 @@ object Boot {
     val system = ActorSystem("api-system")
     val api = system.actorOf(Props[Api])
     val bindListener = system.actorOf(Props[BindListener])
-    val bind = Http.Bind(api, "0.0.0.0", port = 9000)
+    val bind = Http.Bind(api, "0.0.0.0", port = 8080)
     IO(Http)(system).tell(bind, bindListener)
   }
 }
