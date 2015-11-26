@@ -12,6 +12,8 @@ jacoco.thresholds in jacoco.Config := de.johoop.jacoco4sbt.Thresholds(instructio
 Revolver.settings
 Revolver.enableDebugging(port = 5005, suspend = false)
 
+test in assembly := {}
+
 val sprayVersion = "1.3.3"
 val akkaVersion = "2.4.0"
 val cascadeVersion = "0.5.1"
