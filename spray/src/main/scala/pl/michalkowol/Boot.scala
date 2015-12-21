@@ -2,6 +2,7 @@ package pl.michalkowol
 
 import akka.actor.ActorSystem
 import akka.actor.Actor
+import pl.yourcode.photocomparer.web.{ExceptionsHandler, CORSDirective}
 import spray.routing._
 import akka.actor.Props
 import akka.io.IO
@@ -28,15 +29,19 @@ class BindListener extends Actor with Logging {
   }
 }
 
-class Api extends HttpServiceActor with FooRoute with BarRoute {
+class Api extends HttpServiceActor with FooRoute with BarRoute with CORSDirective with ExceptionsHandler {
   def receive: Receive = runRoute {
-    pathPrefix("api") {
-      foo ~ bar
+    handleExceptionsFilter {
+      corsFilter {
+        pathPrefix("api") {
+          foo ~ bar
+        }
+      }
     }
   }
 }
 
-trait FooRoute extends HttpService {
+trait FooRoute extends HttpServiceBase {
   val foo: Route = get {
     path("foo" / Segment) { name =>
       complete {
@@ -46,7 +51,7 @@ trait FooRoute extends HttpService {
   }
 }
 
-trait BarRoute extends HttpService {
+trait BarRoute extends HttpServiceBase {
   val bar: Route = get {
     path("bar" / IntNumber / IntNumber) { (a, b) =>
       complete {
