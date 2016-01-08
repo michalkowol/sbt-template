@@ -1,4 +1,4 @@
-name := "play-scala"
+name := "play-template"
 version in ThisBuild := "1.0.0"
 scalaVersion in ThisBuild := "2.11.7"
 

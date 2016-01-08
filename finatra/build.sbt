@@ -1,4 +1,4 @@
-name := "spray-template"
+name := "finagle-template"
 version in ThisBuild := "1.0.0"
 scalaVersion in ThisBuild := "2.11.7"
 
@@ -12,22 +12,23 @@ jacoco.thresholds in jacoco.Config := de.johoop.jacoco4sbt.Thresholds(instructio
 Revolver.settings
 Revolver.enableDebugging(port = 5005, suspend = false)
 
+resolvers ++= Seq(
+  Resolver.sonatypeRepo("releases"),
+  "Twitter Maven" at "https://maven.twttr.com"
+)
+
 test in assembly := {}
 
-val sprayVersion = "1.3.3"
-val akkaVersion = "2.4.1"
-val cascadeVersion = "0.5.1"
+val finatraVersion = "2.1.2"
+
+libraryDependencies += "com.twitter.finatra" %% "finatra-http" % finatraVersion
+libraryDependencies += "com.twitter.finatra" %% "finatra-httpclient" % finatraVersion
+libraryDependencies += "com.twitter.finatra" %% "finatra-slf4j" % finatraVersion
+libraryDependencies += "com.twitter.inject" %% "inject-core" % finatraVersion
 
 libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.1.3"
 libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.1.0"
-libraryDependencies += "com.paypal" %% "cascade-common" % cascadeVersion
-libraryDependencies += "com.paypal" %% "cascade-json" % cascadeVersion
-libraryDependencies += "com.typesafe.akka" %% "akka-actor" % akkaVersion
-libraryDependencies += "com.typesafe.akka" %% "akka-slf4j" % akkaVersion
-libraryDependencies += "io.spray" %% "spray-routing" % sprayVersion
-libraryDependencies += "io.spray" %% "spray-client" % sprayVersion
+libraryDependencies += "com.paypal" %% "cascade-common" % "0.5.1"
 
 libraryDependencies += "org.scalatest" %% "scalatest" % "2.2.6" % "test"
 libraryDependencies += "org.mockito" % "mockito-all" % "1.10.19" % "test"
-libraryDependencies += "io.spray" %% "spray-testkit" % sprayVersion % "test"
-libraryDependencies += "com.typesafe.akka" %% "akka-testkit" % akkaVersion % "test"
