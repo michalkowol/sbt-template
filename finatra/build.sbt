@@ -17,6 +17,12 @@ resolvers ++= Seq(
   "Twitter Maven" at "https://maven.twttr.com"
 )
 
+assemblyMergeStrategy in assembly := {
+  case "BUILD" => MergeStrategy.discard
+  case other => MergeStrategy.defaultMergeStrategy(other)
+}
+
+
 test in assembly := {}
 
 val finatraVersion = "2.1.2"
