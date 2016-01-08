@@ -15,7 +15,7 @@ Revolver.enableDebugging(port = 5005, suspend = false)
 test in assembly := {}
 
 val sprayVersion = "1.3.3"
-val akkaVersion = "2.4.0"
+val akkaVersion = "2.4.1"
 val cascadeVersion = "0.5.1"
 
 libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.1.3"
@@ -27,7 +27,7 @@ libraryDependencies += "com.typesafe.akka" %% "akka-slf4j" % akkaVersion
 libraryDependencies += "io.spray" %% "spray-routing" % sprayVersion
 libraryDependencies += "io.spray" %% "spray-client" % sprayVersion
 
-libraryDependencies += "org.scalatest" %% "scalatest" % "2.2.5" % "test"
+libraryDependencies += "org.scalatest" %% "scalatest" % "2.2.6" % "test"
 libraryDependencies += "org.mockito" % "mockito-all" % "1.10.19" % "test"
 libraryDependencies += "io.spray" %% "spray-testkit" % sprayVersion % "test"
 libraryDependencies += "com.typesafe.akka" %% "akka-testkit" % akkaVersion % "test"

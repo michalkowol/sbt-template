@@ -15,11 +15,11 @@ libraryDependencies += jdbc
 libraryDependencies += ws
 libraryDependencies += filters
 
-libraryDependencies += "org.scaldi" %% "scaldi-play" % "0.5.11"
+libraryDependencies += "org.scaldi" %% "scaldi-play" % "0.5.12"
 libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.1.3"
 
-libraryDependencies += "org.scalatestplus" %% "play" % "1.4.0-M4" % "test"
-libraryDependencies += "org.scalatest" %% "scalatest" % "2.2.5" % "test"
+libraryDependencies += "org.scalatestplus" %% "play" % "1.5.0-SNAP1" % "test"
+libraryDependencies += "org.scalatest" %% "scalatest" % "2.2.6" % "test"
 libraryDependencies += "org.mockito" % "mockito-all" % "1.10.19" % "test"
 
 routesGenerator := InjectedRoutesGenerator
