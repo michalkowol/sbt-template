@@ -1,6 +1,6 @@
 name := "sbt-template"
 version in ThisBuild := "1.0.0"
-scalaVersion in ThisBuild := "2.11.7"
+scalaVersion in ThisBuild := "2.11.8"
 
 incOptions := incOptions.value.withNameHashing(nameHashing = true)
 
@@ -14,7 +14,7 @@ Revolver.enableDebugging(port = 5005, suspend = false)
 
 test in assembly := {}
 
-libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.1.3"
+libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.1.7"
 libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.1.0"
 libraryDependencies += "com.paypal" %% "cascade-common" % "0.5.1"
 

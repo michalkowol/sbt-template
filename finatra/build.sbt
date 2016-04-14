@@ -1,6 +1,6 @@
 name := "finagle-template"
 version in ThisBuild := "1.0.0"
-scalaVersion in ThisBuild := "2.11.7"
+scalaVersion in ThisBuild := "2.11.8"
 
 incOptions := incOptions.value.withNameHashing(nameHashing = true)
 
@@ -25,14 +25,14 @@ assemblyMergeStrategy in assembly := {
 
 test in assembly := {}
 
-val finatraVersion = "2.1.2"
+val finatraVersion = "2.1.5"
 
 libraryDependencies += "com.twitter.finatra" %% "finatra-http" % finatraVersion
 libraryDependencies += "com.twitter.finatra" %% "finatra-httpclient" % finatraVersion
 libraryDependencies += "com.twitter.finatra" %% "finatra-slf4j" % finatraVersion
 libraryDependencies += "com.twitter.inject" %% "inject-core" % finatraVersion
 
-libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.1.3"
+libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.1.7"
 libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.1.0"
 libraryDependencies += "com.paypal" %% "cascade-common" % "0.5.1"
 

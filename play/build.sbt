@@ -1,6 +1,6 @@
 name := "play-template"
 version in ThisBuild := "1.0.0"
-scalaVersion in ThisBuild := "2.11.7"
+scalaVersion in ThisBuild := "2.11.8"
 
 incOptions := incOptions.value.withNameHashing(nameHashing = true)
 
@@ -15,8 +15,8 @@ libraryDependencies += jdbc
 libraryDependencies += ws
 libraryDependencies += filters
 
-libraryDependencies += "org.scaldi" %% "scaldi-play" % "0.5.12"
-libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.1.3"
+libraryDependencies += "org.scaldi" %% "scaldi-play" % "0.5.15"
+libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.1.5"
 
 libraryDependencies += "org.scalatestplus" %% "play" % "1.5.0-SNAP1" % "test"
 libraryDependencies += "org.scalatest" %% "scalatest" % "2.2.6" % "test"

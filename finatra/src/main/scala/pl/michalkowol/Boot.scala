@@ -3,9 +3,8 @@ package pl.michalkowol
 import com.google.inject.Module
 import com.twitter.finagle.http.{Request, Response}
 import com.twitter.finatra.http.{Controller, HttpServer}
-import com.twitter.finatra.http.filters.CommonFilters
 import com.twitter.finatra.http.routing.HttpRouter
-import com.twitter.finatra.logging.filter.{LoggingMDCFilter, TraceIdMDCFilter}
+import com.twitter.finatra.http.filters.{CommonFilters, LoggingMDCFilter, TraceIdMDCFilter}
 import com.twitter.finatra.logging.modules.Slf4jBridgeModule
 
 case class HiRequest(id: Long, name: String)
@@ -24,7 +23,7 @@ class HelloWorldController extends Controller {
     s"$a + $b = ${a + b}"
   }
 
-  post("/hi") { hiRequest: HiRequest =>
+  post("/api/hi") { hiRequest: HiRequest =>
     "Hello " + hiRequest.name + " with id " + hiRequest.id
   }
 }
