@@ -15,11 +15,11 @@ Revolver.enableDebugging(port = 5005, suspend = false)
 test in assembly := {}
 
 val sprayVersion = "1.3.3"
-val akkaVersion = "2.4.4"
+val akkaVersion = "2.4.8"
 val cascadeVersion = "0.5.1"
 
 libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.1.7"
-libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.1.0"
+libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.4.0"
 libraryDependencies += "com.paypal" %% "cascade-common" % cascadeVersion
 libraryDependencies += "com.paypal" %% "cascade-json" % cascadeVersion
 libraryDependencies += "com.typesafe.akka" %% "akka-actor" % akkaVersion

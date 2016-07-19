@@ -55,7 +55,7 @@ trait BarRoute extends HttpServiceBase {
   val bar: Route = get {
     path("bar" / IntNumber / IntNumber) { (a, b) =>
       complete {
-        s"$a + $b = ${a + b}"
+        s"$a / $b = ${a / b}"
       }
     }
   }
